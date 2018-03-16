@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Document</title>
+</head>
+
+<body onload="createImage1(); createImage2(); createImage3();">
+    <canvas id="my_canvas1" width="300" height="300"> 
+    </canvas>
+    <canvas id="my_canvas2" width="600" height="300"> 
+    </canvas>
+    <canvas id="my_canvas3" width="400" height="400"> 
+        </canvas>
+    <script type="text/javascript">
+        function createImage1() {
+            var canvas = document.getElementById("my_canvas1");
+            var ctx = canvas.getContext("2d");
+            ctx.fillStyle = "rgb(80,80,80)";
+            ctx.fillRect(0, 0, 300, 300);
+            ctx.fillStyle = "rgb(255,255,255)";
+            ctx.clearRect(3, 3, 294, 294);
+            ctx.fillStyle = "rgb(0,0,0)";
+            ctx.fillRect(23, 23, 254, 254);
+            ctx.clearRect(43, 43, 214, 214);
+        }
+    </script>
+    <script type="text/javascript">
+        function createImage2() {
+            var canvas = document.getElementById("my_canvas2");
+            var ctx = canvas.getContext("2d");
+            ctx.fillStyle = "red";
+            ctx.fillRect(50, 50, 400, 150);
+            ctx.fillStyle = "green";
+            ctx.fillRect(80, 80, 400, 150);
+            ctx.fillStyle = "blue";
+            ctx.fillRect(110, 110, 400, 150);
+        }
+    </script>
+    <script type="text/javascript">
+        function createImage3() {
+            var canvas = document.getElementById("my_canvas3");
+            var ctx = canvas.getContext("2d");
+            ctx.fillStyle = "green";
+            ctx.fillRect(0, 0, 50, 100);
+            ctx.fillStyle = "blue";
+            ctx.fillRect(0, 100, 50, 300);
+            ctx.fillStyle = "green";
+            ctx.fillRect(80, 80, 50, 80);
+            ctx.fillStyle = "blue";
+            ctx.fillRect(80, 160, 50, 240);
+            ctx.fillStyle = "green";
+            ctx.fillRect(160, 50, 50, 30);
+            ctx.fillStyle = "blue";
+            ctx.fillRect(160, 80, 50, 320);
+        }
+    </script>
+</body>
+
+</html>
